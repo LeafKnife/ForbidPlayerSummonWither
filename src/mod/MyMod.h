@@ -2,7 +2,7 @@
 
 #include "ll/api/mod/NativeMod.h"
 
-namespace my_mod {
+namespace lk {
 
 class MyMod {
 
@@ -30,4 +30,6 @@ private:
     ll::mod::NativeMod& mSelf;
 };
 
-} // namespace my_mod
+void hook();
+
+} // namespace lk
