@@ -9,7 +9,8 @@
         "tags": [
             "platform:levilamina",
             "type:mod"
-        ]
+        ],
+        "avatar_url":"https://github.com/LeafKnife/ForbidPlayerSummonWither/raw/main/logo.png"
     },
     "asset_url": "https://github.com/LeafKnife/ForbidPlayerSummonWither/releases/download/v$(version)/ForbidPlayerSummonWither-windows-x64.zip",
     "prerequisites": {
