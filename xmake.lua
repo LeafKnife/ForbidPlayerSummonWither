@@ -6,9 +6,9 @@ add_repositories("liteldev-repo https://github.com/LiteLDev/xmake-repo.git")
 -- add_requires("levilamina develop") to use develop version
 -- please note that you should add bdslibrary yourself if using dev version
 if is_config("target_type", "server") then
-    add_requires("levilamina 1.6.0", {configs = {target_type = "server"}})
+    add_requires("levilamina 1.9.1", {configs = {target_type = "server"}})
 else
-    add_requires("levilamina 1.6.0", {configs = {target_type = "client"}})
+    add_requires("levilamina 1.9.1", {configs = {target_type = "client"}})
 end
 
 add_requires("levibuildscript")
@@ -36,10 +36,12 @@ target("ForbidPlayerSummonWither") -- Change this to your mod name.
     add_headerfiles("src/**.h")
     add_files("src/**.cpp")
     add_includedirs("src")
-    -- if is_config("target_type", "server") then
-    --     add_includedirs("src-server")
-    --     add_files("src-server/**.cpp")
-    -- else
-    --     add_includedirs("src-client")
-    --     add_files("src-client/**.cpp")
-    -- end
+    if is_config("target_type", "server") then
+        add_defines("LL_PLAT_S")
+    --  add_includedirs("src-server")
+    --  add_files("src-server/**.cpp")
+    else
+        add_defines("LL_PLAT_C")
+    --  add_includedirs("src-client")
+    --  add_files("src-client/**.cpp")
+    end
