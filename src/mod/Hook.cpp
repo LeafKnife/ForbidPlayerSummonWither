@@ -20,7 +20,7 @@ LL_TYPE_INSTANCE_HOOK(
     ::BlockSource&    region,
     ::BlockPos const& pos
 ) {
-    if (region.mDimension.mId->id == 0) return false;
+    if (region.mDimension.mId->mValue == 0) return false;
     return origin(level, region, pos);
 }
 
